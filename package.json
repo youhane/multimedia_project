@@ -1,0 +1,22 @@
+{
+  "name": "multimedia_project",
+  "version": "1.0.0",
+  "description": "multimedia_project",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "build": "npx tailwindcss -i ./build/build.css -o ./styles/styles.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/youhane/multimedia_project.git"
+  },
+  "keywords": [
+    "multimedi"
+  ],
+  "author": "youhane",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/youhane/multimedia_project/issues"
+  },
+  "homepage": "https://github.com/youhane/multimedia_project#readme"
+}
