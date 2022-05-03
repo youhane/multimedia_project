@@ -9,11 +9,20 @@ $.ajax({
     type: 'get',
     dataType: 'json',
     success: function(result){
-        document.write(`Positif ${result.positif} <br>`)
-        document.write(`Negatif ${result.negatif} <br>`)
-        document.write(`Sembuh ${result.sembuh} <br>`)
+        console.log(result)
+        $('#confirmed').text(result.positif)
+        $('#recovered').text(result.sembuh)
+        $('#deaths').text(result.meninggal)
     },
     error: () => {
         $('#title').text('Something wrong happened')
     }
+})
+
+$("#nav").click(() => {
+    $("#sidebar").removeClass("hidden")
+})
+
+$("#close").click(() => {
+    $("#sidebar").addClass("hidden")
 })

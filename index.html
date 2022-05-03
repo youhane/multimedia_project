@@ -5,10 +5,120 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Multimedia Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
-<body>
-    <h1 class="font-sans">Hello World</h1>
+<body class="bg-black text-white font-sans">
+    
+    <!-- Navbar -->
+    <button class="fixed right-10 mt-1 bg-black rounded-xl z-0" id="nav">
+        <img class="w-6" src="./assets/images/burger_menu.svg" alt="menu">
+    </button>
+
+    <!-- Sidebar -->
+    <section class="bg-black absolute w-screen h-screen px-10 flex flex-col items-center hidden" id="sidebar">
+        <button class="flex w-full justify-between items-center border-y py-3 px-5 italic font-bold text-lg">About <img src="./assets/images/about.svg" alt="about"></button>
+        <button class="flex w-full justify-between items-center border-y py-3 px-5 italic font-bold text-lg">Cast <img src="./assets/images/cast.svg" alt="cast"></button>
+        <button class="flex w-full justify-between items-center border-y py-3 px-5 italic font-bold text-lg">Covid Cases <img src="./assets/images/covid.svg" alt="covid"></button>
+        <button class="flex w-full justify-between items-center border-y py-3 px-5 italic font-bold text-lg">Watch Full <img src="./assets/images/watch.svg" alt="watch"></button>
+        <button class="py-5" id="close"><img src="./assets/images/close.svg" alt="close"></button>
+    </section>
+
+    <!-- Landing -->
+    <section class="my-10 px-10">
+        <div class="mb-5">
+            <h1 class="font-bold tracking-[0.3rem]">THE VACCINE</h1>
+            <h2 class="text-[0.55rem] tracking-widest">Multimedia Project @BINUS</h2>
+        </div>
+        <p class="text-center italic font-bold tracking-widest text-white/80 text-[0.63rem] leading-[1.75]">
+            Coronavirus disease (COVID-19) is an infectious disease caused by the SARS-CoV-2 virus.
+        </p>
+    </section>
+
+    <section class="my-24 px-10">
+        <div class="mb-5">
+            <h1 class="font-bold tracking-[0.3rem]">ABOUT</h1>
+            <h2 class="text-[0.45rem] tracking-widest">We see that you want to know more about the movie</h2>
+        </div>
+        <p class="font-semibold tracking-wider leading-[1.8] text-[0.7rem]">
+            The Vaccine is a short documentary type of movie with the purpose of raising awareness regarding getting the vaccine(s) for the Coronavirus disease, with hope that it will help bring the current pandemic we face fade little by little.
+            <br><br>
+            The movie takes us back to when it all started and how it affected us personally and as a whole community of human civilization. From being able to do whatever we want and now being “trapped” in our own houses hearing news of our beloved ones passing one by one.
+            <br><br>
+            As one of the people who can join in to subside this current situation, help us and yourself by getting the vaccine.
+        </p>
+    </section>
+
+    <section class="my-24 px-10">
+        <div class="mb-5">
+            <h1 class="font-bold tracking-[0.3rem]">CAST</h1>
+            <h2 class="text-[0.7rem] tracking-widest">Hi there! Nice to meet you.</h2>
+        </div>
+        <div>
+            <h1 class="font-bold text-center tracking-widest text-xl mb-10">Group 1</h1>
+            <div class="grid grid-cols-1 gap-10">
+                <div class="flex flex-col text-center items-center font-semibold tracking-widest gap-1.5">
+                    <img class="w-16" src="./assets/images/profile.svg" alt="profile">
+                    <p class="text-lg">Felicia Kwan</p>
+                    <p>2401963046</p>
+                </div>
+                <div class="flex flex-col text-center items-center font-semibold tracking-widest gap-1.5">
+                    <img class="w-16" src="./assets/images/profile.svg" alt="profile">
+                    <p class="text-lg">Felicia Kwan</p>
+                    <p>2401963046</p>
+                </div>
+                <div class="flex flex-col text-center items-center font-semibold tracking-widest gap-1.5">
+                    <img class="w-16" src="./assets/images/profile.svg" alt="profile">
+                    <p class="text-lg">Felicia Kwan</p>
+                    <p>2401963046</p>
+                </div>
+                <div class="flex flex-col text-center items-center font-semibold tracking-widest gap-1.5">
+                    <img class="w-16" src="./assets/images/profile.svg" alt="profile">
+                    <p class="text-lg">Felicia Kwan</p>
+                    <p>2401963046</p>
+                </div>
+                <div class="flex flex-col text-center items-center font-semibold tracking-widest gap-1.5">
+                    <img class="w-16" src="./assets/images/profile.svg" alt="profile">
+                    <p class="text-lg">Felicia Kwan</p>
+                    <p>2401963046</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="my-24 px-10">
+        <div class="mb-5">
+            <h1 class="font-bold tracking-[0.3rem]">COVID CASES</h1>
+            <h2 class="text-[0.6rem] tracking-widest">Latest Coronavirus Cases</h2>
+        </div>
+        <div class="flex flex-col gap-10">
+            <div class="font-bold tracking-widest">
+                <h1>CONFIRMED <i class="fa-solid fa-arrow-up text-red"></i></h1>
+                <h1 class="text-4xl mb-3" id="confirmed">104,694,138</h1>
+                <h1 class="text-[0.55rem] bg-orange p-0.5"><span>300,000</span> more than 25th December 2022</h1>
+            </div>
+            <div class="font-bold tracking-widest">
+                <h1>RECOVERED <i class="fa-solid fa-arrow-up text-red"></i></h1>
+                <h1 class="text-4xl mb-3" id="recovered">104,694,138</h1>
+                <h1 class="text-[0.55rem] bg-green p-0.5"><span>300,000</span> more than 25th December 2022</h1>
+            </div>
+            <div class="font-bold tracking-widest">
+                <h1>DEATHS <i class="fa-solid fa-arrow-up text-red"></i></h1>
+                <h1 class="text-4xl mb-3" id="deaths">104,694,138</h1>
+                <h1 class="text-[0.55rem] bg-red p-0.5"><span>300,000</span> more than 25th December 2022</h1>
+            </div>
+        </div>
+    </section>
+
+    <footer class="font-bold tracking-widest text-center my-10 px-10">
+        <div class="flex justify-center gap-3 mb-3">
+            <img src="./assets/images/github.svg" alt="github">
+            <img src="./assets/images/mail.svg" alt="mail">
+            <img src="./assets/images/chat.svg" alt="chat">
+            <img src="./assets/images/linkedin.svg" alt="linkedin">
+        </div>
+        <h1 class="text-xl">Copyright © 2022</h1>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="./scripts/scripts.js"></script>
