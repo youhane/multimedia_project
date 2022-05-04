@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
-<body class="bg-black text-white font-sans">
+<body class="bg-black text-white font-sans scroll-smooth">
     
     <!-- Navbar -->
     <button class="fixed right-10 mt-1 bg-black rounded-full aspect-square p-2" id="nav">
@@ -16,7 +16,7 @@
     </button>
 
     <!-- Sidebar -->
-    <section class="fixed w-screen h-screen  bg-black top-0 z-10" id="sidebar">
+    <section class="fixed w-screen h-screen hidden bg-black top-0 z-10" id="sidebar">
         <nav class="w-screen h-screen px-10 flex flex-col justify-center items-center text-lg md:text-2xl" id="sidebar">
             <button class="flex w-full justify-between items-center border-y py-3 md:py-5 px-5 italic font-bold">About <img class="md:w-8" src="./assets/images/about.svg" alt="about"></button>
             <button class="flex w-full justify-between items-center border-y py-3 md:py-5 px-5 italic font-bold">Cast <img class="md:w-8" src="./assets/images/cast.svg" alt="cast"></button>
@@ -32,84 +32,102 @@
             <h1 class="font-bold tracking-[0.3rem] text-4xl">THE VACCINE</h1>
             <h2 class="text-[0.55rem] tracking-widest md:text-sm">Multimedia Project @BINUS</h2>
         </div>
-        <p class="text-center italic font-bold text-white/80 tracking-widest text-[0.63rem] leading-[1.75] md:text-sm md:w-7/12 mx-auto" id="facts">
+        <p class="text-center italic font-bold text-white/80 tracking-widest text-[0.63rem] leading-[1.75] md:text-sm md:w-7/12 mx-auto lg:text-left lg:ml-auto lg:mr-0 lg:w-[30%] lg:leading-6" id="facts">
             Coronavirus disease (COVID-19) is an infectious disease caused by the SARS-CoV-2 virus.
         </p>
         <button class="text-center w-full py-16">
-            <i class="fa-solid fa-arrow-down animate-bounce z-0 md:text-2xl "></i>
+            <i class="fa-solid fa-arrow-down animate-bounce z-0 md:text-2xl lg:text-3xl"></i>
         </button>
     </section>
 
+    <!-- About -->
     <section class="my-24 px-10">
         <div class="mb-5 md:mb-8">
-            <h1 class="font-bold tracking-[0.3rem] md:text-4xl">ABOUT</h1>
-            <h2 class="text-[0.45rem] tracking-widest md:text-xs">We see that you want to know more about the movie</h2>
-        </div>
-        <p class="font-semibold tracking-wider leading-[1.8] text-[0.7rem] md:text-base md:leading-9 md:px-8">
-            The Vaccine is a short documentary type of movie with the purpose of raising awareness regarding getting the vaccine(s) for the Coronavirus disease, with hope that it will help bring the current pandemic we face fade little by little.
-            <br><br>
-            The movie takes us back to when it all started and how it affected us personally and as a whole community of human civilization. From being able to do whatever we want and now being “trapped” in our own houses hearing news of our beloved ones passing one by one.
-            <br><br>
-            As one of the people who can join in to subside this current situation, help us and yourself by getting the vaccine.
-        </p>
-    </section>
-
-    <section class="my-24 px-10">
-        <div class="mb-5 md:mb-8">
-            <h1 class="font-bold tracking-[0.3rem] md:text-4xl">CAST</h1>
-            <h2 class="text-[0.7rem] tracking-widest md:text-xs">Hi there! Nice to meet you.</h2>
+            <h1 class="font-bold tracking-[0.3rem] md:text-4xl lg:text-[2.5rem] lg:tracking-[0.5rem]">ABOUT</h1>
+            <h2 class="text-[0.45rem] tracking-widest md:text-xs lg:text-sm">We see that you want to know more about the movie</h2>
         </div>
         <div>
-            <h1 class="font-bold text-center tracking-widest text-xl mb-10 md:text-2xl">Group 1</h1>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <div class="flex flex-col text-center items-center font-semibold tracking-widest gap-1.5">
-                    <img class="w-16" src="./assets/images/profile.svg" alt="profile">
-                    <p class="text-lg">Felicia Kwan</p>
-                    <p>2401963046</p>
+            <div class="flex items-center justify-center">
+                <img class="hidden lg:block w-1/12 mb-auto mt-10" src="./assets/images/syringe.svg" alt="syringe">
+                <p class="font-semibold tracking-wider leading-[1.8] text-[0.7rem] md:text-base md:leading-9 md:px-8 lg:text-xl lg:leading-10">
+                    The Vaccine is a short documentary type of movie with the purpose of raising awareness regarding getting the vaccine(s) for the Coronavirus disease, with hope that it will help bring the current pandemic we face fade little by little.
+                    <br><br>
+                </p>
+            </div>
+            <div class="flex items-center justify-center">
+                <img class="hidden lg:block w-1/12 mb-auto mt-10" src="./assets/images/virus.svg" alt="virus">
+                <p class="font-semibold tracking-wider leading-[1.8] text-[0.7rem] md:text-base md:leading-9 md:px-8 lg:text-xl lg:leading-10">
+                    The movie takes us back to when it all started and how it affected us personally and as a whole community of human civilization. From being able to do whatever we want and now being “trapped” in our own houses hearing news of our beloved ones passing one by one.
+                    <br><br>
+                </p>
+            </div>
+            <div class="flex items-center justify-center">
+                <img class="hidden lg:block w-1/12 mb-auto mt-10" src="./assets/images/hand.svg" alt="hand">
+                <p class="font-semibold tracking-wider leading-[1.8] text-[0.7rem] md:text-base md:leading-9 md:px-8 lg:text-xl lg:leading-10">
+                    As one of the people who can join in to subside this current situation, help us and yourself by getting the vaccine.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cast -->
+    <section class="my-24 px-10">
+        <div class="mb-5 md:mb-8">
+            <h1 class="font-bold tracking-[0.3rem] md:text-4xl lg:text-[2.5rem] lg:tracking-[0.5rem]">CAST</h1>
+            <h2 class="text-[0.7rem] tracking-widest md:text-xs lg:text-sm">Hi there! Nice to meet you.</h2>
+        </div>
+        <div>
+            <h1 class="font-bold text-center tracking-widest text-xl mb-10 md:text-2xl lg:text-3xl">Group 1</h1>
+            <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-6">
+                <div class="flex flex-col text-center items-center font-semibold tracking-widest gap-1.5 lg:col-span-2">
+                    <img class="w-16 lg:w-20" src="./assets/images/profile.svg" alt="profile">
+                    <p class="text-lg lg:text-xl">Felicia Kwan</p>
+                    <p class="lg:text-lg">2401963046</p>
                 </div>
-                <div class="flex flex-col text-center items-center font-semibold tracking-widest gap-1.5">
-                    <img class="w-16" src="./assets/images/profile.svg" alt="profile">
-                    <p class="text-lg">Felicia Kwan</p>
-                    <p>2401963046</p>
+                <div class="flex flex-col text-center items-center font-semibold tracking-widest gap-1.5 lg:col-span-2">
+                    <img class="w-16 lg:w-20" src="./assets/images/profile.svg" alt="profile">
+                    <p class="text-lg lg:text-xl">Felicia Kwan</p>
+                    <p class="lg:text-lg">2401963046</p>
                 </div>
                 <div class="flex flex-col text-center items-center font-semibold tracking-widest gap-1.5 md:col-span-2">
-                    <img class="w-16" src="./assets/images/profile.svg" alt="profile">
-                    <p class="text-lg">Felicia Kwan</p>
-                    <p>2401963046</p>
+                    <img class="w-16 lg:w-20" src="./assets/images/profile.svg" alt="profile">
+                    <p class="text-lg lg:text-xl">Felicia Kwan</p>
+                    <p class="lg:text-lg">2401963046</p>
                 </div>
-                <div class="flex flex-col text-center items-center font-semibold tracking-widest gap-1.5">
-                    <img class="w-16" src="./assets/images/profile.svg" alt="profile">
-                    <p class="text-lg">Felicia Kwan</p>
-                    <p>2401963046</p>
+                <div class="flex flex-col text-center items-center font-semibold tracking-widest gap-1.5 lg:col-span-3">
+                    <img class="w-16 lg:w-20" src="./assets/images/profile.svg" alt="profile">
+                    <p class="text-lg lg:text-xl">Felicia Kwan</p>
+                    <p class="lg:text-lg">2401963046</p>
                 </div>
-                <div class="flex flex-col text-center items-center font-semibold tracking-widest gap-1.5">
-                    <img class="w-16" src="./assets/images/profile.svg" alt="profile">
-                    <p class="text-lg">Felicia Kwan</p>
-                    <p>2401963046</p>
+                <div class="flex flex-col text-center items-center font-semibold tracking-widest gap-1.5 lg:col-span-3">
+                    <img class="w-16 lg:w-20" src="./assets/images/profile.svg" alt="profile">
+                    <p class="text-lg lg:text-xl">Felicia Kwan</p>
+                    <p class="lg:text-lg">2401963046</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Covid Cases -->
     <section class="my-24 px-10">
         <div class="mb-5 md:mb-8">
-            <h1 class="font-bold tracking-[0.3rem] md:text-4xl">COVID CASES</h1>
-            <h2 class="text-[0.6rem] tracking-widest md:text-xs">Latest Coronavirus Cases</h2>
+            <h1 class="font-bold tracking-[0.3rem] md:text-4xl lg:text-[2.5rem] lg:tracking-[0.5rem]">COVID CASES</h1>
+            <h2 class="text-[0.6rem] tracking-widest md:text-xs lg:text-sm">Latest Coronavirus Cases</h2>
         </div>
         <div class="flex flex-col gap-10 md:gap-20">
             <div class="font-bold tracking-widest">
-                <h1 class="md:text-3xl">CONFIRMED <i class="fa-solid fa-arrow-up text-red"></i></h1>
-                <h1 class="text-4xl mb-3 md:text-5xl" id="confirmed">104,694,138</h1>
+                <h1 class="md:text-3xl lg:tracking-[0.3rem]">CONFIRMED <i class="fa-solid fa-arrow-up text-red"></i></h1>
+                <h1 class="text-4xl mb-3 md:text-5xl lg:text-6xl lg:tracking-[0.5rem]" id="confirmed">104,694,138</h1>
                 <h1 class="text-[0.55rem] bg-orange p-0.5 md:text-2xl md:p-1"><span>300,000</span> more than 25th December 2022</h1>
             </div>
             <div class="font-bold tracking-widest">
-                <h1 class="md:text-3xl">RECOVERED <i class="fa-solid fa-arrow-up text-red"></i></h1>
-                <h1 class="text-4xl mb-3 md:text-5xl" id="recovered">104,694,138</h1>
+                <h1 class="md:text-3xl lg:tracking-[0.3rem]">RECOVERED <i class="fa-solid fa-arrow-up text-red"></i></h1>
+                <h1 class="text-4xl mb-3 md:text-5xl lg:text-6xl lg:tracking-[0.5rem]" id="recovered">104,694,138</h1>
                 <h1 class="text-[0.55rem] bg-green p-0.5 md:text-2xl md:p-1"><span>300,000</span> more than 25th December 2022</h1>
             </div>
             <div class="font-bold tracking-widest">
-                <h1 class="md:text-3xl">DEATHS <i class="fa-solid fa-arrow-up text-red"></i></h1>
-                <h1 class="text-4xl mb-3 md:text-5xl" id="deaths">104,694,138</h1>
+                <h1 class="md:text-3xl lg:tracking-[0.3rem]">DEATHS <i class="fa-solid fa-arrow-up text-red"></i></h1>
+                <h1 class="text-4xl mb-3 md:text-5xl lg:text-6xl lg:tracking-[0.5rem]" id="deaths">104,694,138</h1>
                 <h1 class="text-[0.55rem] bg-red p-0.5 md:text-2xl md:p-1"><span>300,000</span> more than 25th December 2022</h1>
             </div>
         </div>

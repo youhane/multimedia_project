@@ -20,9 +20,13 @@ $.ajax({
 })
 
 $("#nav").click(() => {
-    $("#sidebar").slideDown();
+    $("#sidebar").animate({
+        width: "toggle"
+    });
 })
 
 $("#close").click(() => {
-    $("#sidebar").slideUp();
+    $("#sidebar").animate({
+        width: "toggle"
+    });
 })
