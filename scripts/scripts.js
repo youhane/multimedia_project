@@ -20,9 +20,9 @@ $.ajax({
 })
 
 $("#nav").click(() => {
-    $("#sidebar").removeClass("hidden")
+    $("#sidebar").slideDown();
 })
 
 $("#close").click(() => {
-    $("#sidebar").addClass("hidden")
+    $("#sidebar").slideUp();
 })
