@@ -11,7 +11,7 @@
 <body class="bg-black text-white font-sans scroll-smooth">
     
     <!-- Navbar -->
-    <button class="fixed right-10 md:right-14 xl:right-28 mt-1 bg-black rounded-full aspect-square p-2" id="nav">
+    <button class="fixed right-10 md:right-14 xl:right-28 mt-1 bg-black rounded-full aspect-square p-2 -z-30" id="nav">
         <img class="w-6 md:w-8" src="./assets/images/burger_menu.svg" alt="menu">
     </button>
 
@@ -37,23 +37,26 @@
     </section>
 
     <!-- Landing -->
-    <section class="my-10 px-10 md:px-14 lg:px-16 xl:px-24">
-        <div class="mb-5">
+    <section class="mt-10 lg:pb-0 px-10 md:px-14 lg:px-16 xl:pb-52 xl:px-24">
+        <div class="mb-5 lg:mb-80 xl:mb-96">
             <h1 class="font-bold tracking-[0.25rem] md:tracking-[0.4rem] lg:tracking-[0.5rem] md:text-3xl lg:text-4xl xl:text-[2.5rem] xl:mb-1">restoration.</h1>
             <h2 class="text-[0.55rem] tracking-wide md:tracking-wider lg:tracking-widest xl:tracking-[0.2rem] md:text-sm">Multimedia Project @BINUS</h2>
         </div>
-        <p class="text-center italic font-bold text-white/80 tracking-widest text-[0.63rem] leading-[1.75] md:text-sm md:w-7/12 mx-auto lg:text-left lg:ml-auto lg:mr-0 lg:w-[30%] lg:leading-6" id="facts">
+        <video playsinline autoplay muted loop class="mb-5 w-screen object-contain lg:absolute lg:w-screen lg:left-0 lg:top-0 -z-10 brightness-[0.4]">
+            <source src="./assets/video/trailer.mp4" type="video/mp4">
+        </video>
+        <p class="text-center italic font-bold text-white/80 tracking-widest text-[0.63rem] leading-[1.75] md:text-base xl:text-xl md:w-7/12 mx-auto lg:text-left lg:ml-auto lg:mr-0 lg:w-[30%] lg:leading-6" id="facts">
             Coronavirus disease (COVID-19) is an infectious disease caused by the SARS-CoV-2 virus.
         </p>
         <a href="#about">
-            <button class="text-center w-full py-16">
+            <button class="text-center w-full pt-5 lg:pt-[5.5rem]">
                 <i class="fa-solid fa-arrow-down animate-bounce z-0 md:text-2xl lg:text-3xl"></i>
             </button>
         </a>
     </section>
 
     <!-- About -->
-    <section class="my-24 md:my-28 px-10 md:px-14 lg:px-16 xl:px-24" id="about">
+    <section class="my-20 md:my-24 px-10 md:px-14 lg:px-16 xl:px-24" id="about">
         <div class="mb-5 md:mb-8">
             <h1 class="font-bold tracking-[0.3rem] md:text-4xl lg:text-[2.5rem] lg:tracking-[0.5rem] lg:mb-1">ABOUT</h1>
             <h2 class="text-[0.45rem] tracking-widest md:text-xs lg:text-sm">We see that you want to know more about the movie</h2>
