@@ -1,5 +1,4 @@
-// API
-const BASE_URL = 'https://apicovid19indonesia-v2.vercel.app/api/indonesia'
+const BASE_URL = 'https://disease.sh/v3/covid-19/all'
 
 $.ajax({
     url: BASE_URL,
@@ -9,10 +8,13 @@ $.ajax({
     type: 'get',
     dataType: 'json',
     success: function(result){
-        console.log(result)
-        $('#confirmed').text(result.positif)
-        $('#recovered').text(result.sembuh)
-        $('#deaths').text(result.meninggal)
+        $('#confirmed').text(result.cases.toLocaleString())
+        $('#recovered').text(result.recovered.toLocaleString())
+        $('#deaths').text(result.deaths.toLocaleString())
+        
+        $('#new-positive').text(result.todayCases.toLocaleString())
+        $('#new-recovered').text(result.todayRecovered.toLocaleString())
+        $('#new-deaths').text(result.todayDeaths.toLocaleString())
     },
     error: () => {
         $('#title').text('Something wrong happened')
@@ -20,13 +22,19 @@ $.ajax({
 })
 
 $("#nav").click(() => {
-    $("#sidebar").animate({
-        width: "toggle"
+    $("#sidebar").show("slide",{
+        direction: "right",
     });
 })
 
 $("#close").click(() => {
     $("#sidebar").animate({
-        width: "toggle"
+        width: "toggle",
+    });
+})
+
+$("#nav-choice").click(() => {
+    $("#sidebar").animate({
+        width: "toggle",
     });
 })
