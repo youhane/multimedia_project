@@ -28,13 +28,23 @@ $("#nav").click(() => {
 })
 
 $("#close").click(() => {
-    $("#sidebar").animate({
-        width: "toggle",
+    $("#sidebar").hide("slide",{
+        direction: "right",
     });
 })
 
 $("#nav-choice").click(() => {
-    $("#sidebar").animate({
-        width: "toggle",
+    $("#sidebar").hide("slide",{
+        direction: "right",
     });
+})
+
+$('#nav').hide();
+
+$(window).scroll(() => {
+    if ($(this).scrollTop() > 720) {
+        $('#nav').fadeIn();
+    } else {
+        $('#nav').fadeOut();
+    }
 })

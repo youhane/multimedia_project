@@ -18,3 +18,7 @@
     font-family: "RalewaySemiBold";
     src: url("../assets/fonts/Raleway-SemiBold.ttf");
 }
+
+*{
+    scroll-behavior: smooth;
+}
