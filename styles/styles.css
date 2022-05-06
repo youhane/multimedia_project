@@ -496,10 +496,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   z-index: 0;
 }
 
-.m-0 {
-  margin: 0px;
-}
-
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -547,16 +543,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .h-screen {
   height: 100vh;
-}
-
-.max-h-fit {
-  max-height: -webkit-fit-content;
-  max-height: -moz-fit-content;
-  max-height: fit-content;
-}
-
-.max-h-96 {
-  max-height: 24rem;
 }
 
 .max-h-\[100vh\] {
@@ -618,42 +604,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .animate-bounce {
   -webkit-animation: bounce 1s infinite;
           animation: bounce 1s infinite;
-}
-
-@-webkit-keyframes pulse {
-  50% {
-    opacity: .5;
-  }
-}
-
-@keyframes pulse {
-  50% {
-    opacity: .5;
-  }
-}
-
-.animate-pulse {
-  -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-          animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-
-@-webkit-keyframes ping {
-  75%, 100% {
-    transform: scale(2);
-    opacity: 0;
-  }
-}
-
-@keyframes ping {
-  75%, 100% {
-    transform: scale(2);
-    opacity: 0;
-  }
-}
-
-.animate-ping {
-  -webkit-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
-          animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
 
 .grid-cols-1 {
@@ -723,11 +673,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-red {
   --tw-bg-opacity: 1;
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
-}
-
-.object-contain {
-  -o-object-fit: contain;
-     object-fit: contain;
 }
 
 .p-2 {
@@ -924,12 +869,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   scroll-behavior: smooth;
 }
 
-.hover\:text-white\/80:hover {
-  color: rgb(250 250 250 / 0.8);
-}
-
 .hover\:text-white\/50:hover {
   color: rgb(250 250 250 / 0.5);
+}
+
+@-webkit-keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
 }
 
 @keyframes ping {
@@ -1075,12 +1023,12 @@ Ensure the default browser behavior of the `hidden` attribute.
     position: absolute;
   }
 
-  .lg\:left-0 {
-    left: 0px;
-  }
-
   .lg\:top-0 {
     top: 0px;
+  }
+
+  .lg\:left-0 {
+    left: 0px;
   }
 
   .lg\:col-span-2 {
@@ -1091,16 +1039,16 @@ Ensure the default browser behavior of the `hidden` attribute.
     grid-column: span 3 / span 3;
   }
 
-  .lg\:mb-80 {
-    margin-bottom: 20rem;
-  }
-
   .lg\:ml-auto {
     margin-left: auto;
   }
 
   .lg\:mr-0 {
     margin-right: 0px;
+  }
+
+  .lg\:mb-14 {
+    margin-bottom: 3.5rem;
   }
 
   .lg\:mb-1 {
@@ -1119,108 +1067,16 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-top: 0.75rem;
   }
 
-  .lg\:mb-10 {
-    margin-bottom: 2.5rem;
-  }
-
-  .lg\:mb-14 {
-    margin-bottom: 3.5rem;
-  }
-
   .lg\:block {
     display: block;
-  }
-
-  .lg\:h-32 {
-    height: 8rem;
-  }
-
-  .lg\:h-96 {
-    height: 24rem;
-  }
-
-  .lg\:h-screen {
-    height: 100vh;
-  }
-
-  .lg\:h-fit {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-  }
-
-  .lg\:h-min {
-    height: -webkit-min-content;
-    height: -moz-min-content;
-    height: min-content;
-  }
-
-  .lg\:h-full {
-    height: 100%;
-  }
-
-  .lg\:h-\[90vh\] {
-    height: 90vh;
-  }
-
-  .lg\:h-\[80vh\] {
-    height: 80vh;
-  }
-
-  .lg\:h-\[50vh\] {
-    height: 50vh;
-  }
-
-  .lg\:h-\[60vh\] {
-    height: 60vh;
   }
 
   .lg\:h-\[55vh\] {
     height: 55vh;
   }
 
-  .lg\:max-h-96 {
-    max-height: 24rem;
-  }
-
-  .lg\:max-h-min {
-    max-height: -webkit-min-content;
-    max-height: -moz-min-content;
-    max-height: min-content;
-  }
-
-  .lg\:max-h-screen {
-    max-height: 100vh;
-  }
-
-  .lg\:max-h-\[80vh\] {
-    max-height: 80vh;
-  }
-
-  .lg\:max-h-\[90vh\] {
-    max-height: 90vh;
-  }
-
-  .lg\:max-h-\[95vh\] {
-    max-height: 95vh;
-  }
-
-  .lg\:max-h-\[97vh\] {
-    max-height: 97vh;
-  }
-
-  .lg\:max-h-\[9vh\] {
-    max-height: 9vh;
-  }
-
-  .lg\:max-h-\[100vh\] {
-    max-height: 100vh;
-  }
-
-  .lg\:min-h-min {
-    min-height: -webkit-min-content;
-    min-height: -moz-min-content;
-    min-height: min-content;
+  .lg\:w-full {
+    width: 100%;
   }
 
   .lg\:w-screen {
@@ -1241,64 +1097,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:w-10\/12 {
     width: 83.333333%;
-  }
-
-  .lg\:w-full {
-    width: 100%;
-  }
-
-  .lg\:w-96 {
-    width: 24rem;
-  }
-
-  .lg\:w-80 {
-    width: 20rem;
-  }
-
-  .lg\:max-w-screen-lg {
-    max-width: 1024px;
-  }
-
-  .lg\:max-w-screen-xl {
-    max-width: 1280px;
-  }
-
-  .lg\:max-w-screen-2xl {
-    max-width: 1536px;
-  }
-
-  .lg\:max-w-max {
-    max-width: -webkit-max-content;
-    max-width: -moz-max-content;
-    max-width: max-content;
-  }
-
-  .lg\:max-w-fit {
-    max-width: -webkit-fit-content;
-    max-width: -moz-fit-content;
-    max-width: fit-content;
-  }
-
-  .lg\:max-w-xl {
-    max-width: 36rem;
-  }
-
-  .lg\:max-w-2xl {
-    max-width: 42rem;
-  }
-
-  .lg\:max-w-full {
-    max-width: 100%;
-  }
-
-  .lg\:max-w-min {
-    max-width: -webkit-min-content;
-    max-width: -moz-min-content;
-    max-width: min-content;
-  }
-
-  .lg\:max-w-7xl {
-    max-width: 80rem;
   }
 
   .lg\:grid-cols-6 {
@@ -1330,14 +1128,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:pt-\[5\.5rem\] {
     padding-top: 5.5rem;
-  }
-
-  .lg\:pb-10 {
-    padding-bottom: 2.5rem;
-  }
-
-  .lg\:pb-14 {
-    padding-bottom: 3.5rem;
   }
 
   .lg\:text-left {
@@ -1404,16 +1194,8 @@ Ensure the default browser behavior of the `hidden` attribute.
     right: 7rem;
   }
 
-  .xl\:mb-96 {
-    margin-bottom: 24rem;
-  }
-
   .xl\:mb-1 {
     margin-bottom: 0.25rem;
-  }
-
-  .xl\:h-96 {
-    height: 24rem;
   }
 
   .xl\:px-24 {
@@ -1421,40 +1203,12 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding-right: 6rem;
   }
 
-  .xl\:pt-48 {
-    padding-top: 12rem;
-  }
-
-  .xl\:pt-52 {
-    padding-top: 13rem;
-  }
-
-  .xl\:pt-96 {
-    padding-top: 24rem;
-  }
-
-  .xl\:pb-14 {
-    padding-bottom: 3.5rem;
-  }
-
-  .xl\:pb-12 {
-    padding-bottom: 3rem;
-  }
-
-  .xl\:pb-20 {
-    padding-bottom: 5rem;
-  }
-
-  .xl\:pb-32 {
-    padding-bottom: 8rem;
-  }
-
-  .xl\:pb-96 {
-    padding-bottom: 24rem;
-  }
-
   .xl\:pb-44 {
     padding-bottom: 11rem;
+  }
+
+  .xl\:pt-48 {
+    padding-top: 12rem;
   }
 
   .xl\:text-\[2\.5rem\] {
