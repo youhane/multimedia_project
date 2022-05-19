@@ -1,50 +1,80 @@
 const BASE_URL = 'https://disease.sh/v3/covid-19/all'
 
-$.ajax({
-    url: BASE_URL,
-    headers: {
-        'Content-Type': 'application/x-www-form-urlencoded'
-    },
-    type: 'get',
-    dataType: 'json',
-    success: function(result){
-        $('#confirmed').text(result.cases.toLocaleString())
-        $('#recovered').text(result.recovered.toLocaleString())
-        $('#deaths').text(result.deaths.toLocaleString())
-        
-        $('#new-positive').text(result.todayCases.toLocaleString())
-        $('#new-recovered').text(result.todayRecovered.toLocaleString())
-        $('#new-deaths').text(result.todayDeaths.toLocaleString())
-    },
-    error: () => {
-        $('#title').text('Something wrong happened')
-    }
-})
+$(document).ready(() => {
+    // Onload Page fadein
+    $("body").fadeIn(700);
 
-$("#nav").click(() => {
-    $("#sidebar").show("slide",{
-        direction: "right",
-    });
-})
+    $.ajax({
+        url: BASE_URL,
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        type: 'get',
+        dataType: 'json',
+        success: function(result){
+            $('#confirmed').text(result.cases.toLocaleString())
+            $('#recovered').text(result.recovered.toLocaleString())
+            $('#deaths').text(result.deaths.toLocaleString())
+            
+            $('#new-positive').text(result.todayCases.toLocaleString())
+            $('#new-recovered').text(result.todayRecovered.toLocaleString())
+            $('#new-deaths').text(result.todayDeaths.toLocaleString())
+        },
+        error: () => {
+            $('#title').text('Something wrong happened')
+        }
+    })
+    
+    $("#nav").click(() => {
+        $("#sidebar").show("slide",{
+            direction: "right",
+        });
+    })
+    
+    $("#close").click(() => {
+        $("#sidebar").hide("slide",{
+            direction: "right",
+        });
+    })
+    
+    $("#nav-choice").click(() => {
+        $("#sidebar").hide("slide",{
+            direction: "right",
+        });
+    })
+    
+    $('#nav').hide();
+    
+    $(window).scroll(() => {
+        if ($(this).scrollTop() > 720) {
+            $('#nav').fadeIn();
+        } else {
+            $('#nav').fadeOut();
+        }
+    })
 
-$("#close").click(() => {
-    $("#sidebar").hide("slide",{
-        direction: "right",
-    });
-})
+    $("#audio-yes").click(() => {
+        $("#sound-prompt").fadeOut(1000);
+        $("video").prop("muted", false);
+        $('#sound-icon').addClass('fa-volume-high')
+    })
+    
+    $("#audio-no").click(() => {
+        $("#sound-prompt").fadeOut(1000);
+        $("video").prop("muted", true);
+        $('#sound-icon').addClass('fa-volume-xmark')
+    })
 
-$("#nav-choice").click(() => {
-    $("#sidebar").hide("slide",{
-        direction: "right",
-    });
-})
+    $("#sound-toggle").click(() => {
+        let sound = $("video").prop('muted');
+        $("video").prop("muted", !sound); 
+        toggleSound(sound);
+    })
 
-$('#nav').hide();
+    const toggleSound = (soundOff) => {
+        $('#sound-icon').removeClass('fa-volume-high')
+        $('#sound-icon').removeClass('fa-volume-xmark')
 
-$(window).scroll(() => {
-    if ($(this).scrollTop() > 720) {
-        $('#nav').fadeIn();
-    } else {
-        $('#nav').fadeOut();
+        !soundOff ? $('#sound-icon').addClass('fa-volume-high') : $('#sound-icon').addClass('fa-volume-xmark')
     }
 })
