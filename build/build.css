@@ -19,6 +19,36 @@
     src: url("../assets/fonts/Raleway-SemiBold.ttf");
 }
 
+@layer components{
+    .prompt-button{
+        @apply border py-1 px-3 hover:bg-white hover:text-black hover:shadow-sm hover:shadow-white ease-in-out duration-300;
+    }
+
+    .nav-button{
+        @apply flex w-full justify-between items-center border-y py-3 md:py-5 px-5 italic font-bold;
+    }
+
+    .nav-link{
+        @apply w-full active:animate-ping hover:text-white/50;
+    }
+
+    .section-container{
+        @apply py-24 md:py-28 xl:pt-48 px-10 md:px-14 lg:px-16 xl:px-24;
+    }
+
+    .text-synopsis{
+        @apply font-semibold tracking-wider leading-[1.8] text-[0.7rem] md:text-base md:leading-9 md:px-8 lg:text-xl xl:text-2xl lg:leading-10 xl:leading-[3rem] w-full;
+    }
+
+    .synopsis-image{
+        @apply hidden lg:block max-w-xs w-24;
+    }
+}
+
 *{
     scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar{
+    display: none;
 }

@@ -15,20 +15,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
+
 <body class="bg-black text-white font-sans scroll-smooth hidden">
     <!-- Sound Prompt -->
     <section class="fixed h-screen w-screen flex items-center justify-center bg-black z-30" id="sound-prompt">
         <div class="border text-center p-8 animate-ping" style="animation-iteration-count: 1; animation-direction: reverse;">
             <h1 class="mb-3">Do you want sound to play?</h1>
             <div class="flex gap-5 items-center justify-center">
-                <button class="border py-1 px-3 hover:bg-white hover:text-black hover:shadow-sm hover:shadow-white ease-in-out duration-300" id="audio-yes">Yes</button>
-                <button class="border py-1 px-3 hover:bg-white hover:text-black hover:shadow-sm hover:shadow-white ease-in-out duration-300" id="audio-no">No</button>
+                <button class="prompt-button" id="audio-yes">Yes</button>
+                <button class="prompt-button" id="audio-no">No</button>
             </div>
         </div>
     </section>
 
     <!-- Sound Toggler -->
-    <button class="bg-black text-white rounded-full py-4 px-4 absolute bottom-20 left-20" id="sound-toggle"><i class="fa-solid fa-lg" id="sound-icon"></i></button>
+    <button class="bg-black text-white rounded-full p-2 absolute top-12 right-10 border border-white/20 active:shadow-2xl active:shadow-white text-xs flex items-center justify-center md:right-14 md:text-lg md:p-3" id="sound-toggle">
+        <i class="fa-solid" id="sound-icon"></i>
+    </button>
 
     <!-- Navbar -->
     <button class="fixed top-10 right-10 md:right-14 xl:right-28 bg-black rounded-full aspect-square p-2" id="nav">
@@ -39,17 +42,17 @@
     <section class="w-screen h-screen fixed bg-black top-0 z-10 hidden" id="sidebar">
         <nav class="w-screen h-screen px-10 lg:px-20 flex flex-col lg:flex-row-reverse justify-center items-center text-lg md:text-2xl" id="sidebar">
             <div class="w-screen px-10 flex flex-col justify-center items-center" id="nav-choice">
-                <a href="#about" class="w-full active:animate-ping hover:text-white/50">
-                    <button class="flex w-full justify-between items-center border-y py-3 md:py-5 px-5 italic font-bold ">About <img class="md:w-8" src="./assets/images/about.svg" alt="about"></button>
+                <a href="#about" class="nav-link">
+                    <button class="nav-button">Synopsis <img class="md:w-8" src="./assets/images/about.svg" alt="about"></button>
                 </a>
-                <a href="#cast" class="w-full active:animate-ping hover:text-white/50">
-                    <button class="flex w-full justify-between items-center border-y py-3 md:py-5 px-5 italic font-bold">Cast <img class="md:w-8" src="./assets/images/cast.svg" alt="cast"></button>
+                <a href="#cast" class="nav-link">
+                    <button class="nav-button">Cast <img class="md:w-8" src="./assets/images/cast.svg" alt="cast"></button>
                 </a>
-                <a href="#cases" class="w-full active:animate-ping hover:text-white/50">
-                    <button class="flex w-full justify-between items-center border-y py-3 md:py-5 px-5 italic font-bold">Covid Cases <img class="md:w-8" src="./assets/images/covid.svg" alt="covid"></button>
+                <a href="#cases" class="nav-link">
+                    <button class="nav-button">Covid Cases <img class="md:w-8" src="./assets/images/covid.svg" alt="covid"></button>
                 </a>
-                <a href="https://drive.google.com/file/d/1w4OQQlqdgLJoOy-iwUjxIxg_SdyJeVor/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="w-full active:animate-ping hover:text-white/50">
-                    <button class="flex w-full justify-between items-center border-y py-3 md:py-5 px-5 italic font-bold">Watch Full <img class="md:w-8" src="./assets/images/watch.svg" alt="watch"></button>
+                <a href="https://drive.google.com/file/d/1w4OQQlqdgLJoOy-iwUjxIxg_SdyJeVor/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="nav-link">
+                    <button class="nav-button">Watch Full <img class="md:w-8" src="./assets/images/watch.svg" alt="watch"></button>
                 </a>
             </div>
             <button class="py-5" id="close"><img class="md:w-6" src="./assets/images/close.svg" alt="close"></button>
@@ -83,30 +86,35 @@
         </div>
         <div class="w-auto lg:w-11/12 mx-auto">
             <div class="flex items-center justify-center">
-                <img class="hidden lg:block w-1/12 mb-auto mt-8 lg:mt-10" src="./assets/images/syringe.svg" alt="syringe">
-                <p class="font-semibold tracking-wider leading-[1.8] text-[0.7rem] md:text-base md:leading-9 md:px-8 lg:text-xl xl:text-2xl lg:leading-10 xl:leading-[3rem]">
+                <img class="synopsis-image pb-10" src="./assets/images/syringe.svg" alt="syringe">
+                <p class="text-synopsis">
                     <b class="tracking-[0.2rem] lg:tracking-[0.3rem]">restoration.</b> is a short documentary type of movie with the purpose of raising awareness regarding getting the vaccine(s) for the Coronavirus disease, with hope that it will help bring the current pandemic we face fade little by little.
                     <br><br>
                 </p>
             </div>
             <div class="flex items-center justify-center">
-                <img class="hidden lg:block w-1/12 mb-auto mt-10 lg:mt-14" src="./assets/images/virus.svg" alt="virus">
-                <p class="font-semibold tracking-wider leading-[1.8] text-[0.7rem] md:text-base md:leading-9 md:px-8 lg:text-xl xl:text-2xl lg:leading-10 xl:leading-[3rem]">
+                <img class="synopsis-image pb-10" src="./assets/images/virus.svg" alt="virus">
+                <p class="text-synopsis">
                     The movie takes us back to when it all started and how it affected us personally and as a whole community of human civilization. From being able to do whatever we want and now being “trapped” in our own houses hearing news of our beloved ones passing one by one.
                     <br><br>
                 </p>
             </div>
             <div class="flex items-center justify-center">
-                <img class="hidden lg:block w-1/12 mb-auto lg:mt-3" src="./assets/images/hand.svg" alt="hand">
-                <p class="font-semibold tracking-wider leading-[1.8] text-[0.7rem] md:text-base md:leading-9 md:px-8 lg:text-xl xl:text-2xl lg:leading-10 xl:leading-[3rem]">
+                <img class="synopsis-image" src="./assets/images/hand.svg" alt="hand">
+                <p class="text-synopsis">
                     As one of the people who can join in to subside this current situation, help us and yourself by getting the vaccine.
                 </p>
             </div>
         </div>
+        <div>
+            <a href="https://drive.google.com/file/d/1w4OQQlqdgLJoOy-iwUjxIxg_SdyJeVor/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <button class="bg-orange w-full md:w-11/12 lg:w-10/12 mx-auto flex items-center justify-center rounded-md py-2 md:py-3 mt-10 lg:mt-20 text-sm md:text-base lg:text-xl font-bold hover:shadow-md hover:shadow-white/50 duration-500 ease-in-out">Watch Full</button>
+            </a>
+        </div>
     </section>
 
     <!-- Cast -->
-    <section class="py-24 md:py-28 xl:pt-48 px-10 md:px-14 lg:px-16 xl:px-24" id="cast">
+    <section class="section-container" id="cast">
         <div class="mb-5 md:mb-8 lg:mb-14">
             <h1 class="font-bold tracking-[0.3rem] md:text-4xl lg:text-[2.5rem] lg:tracking-[0.5rem] lg:mb-1">CAST</h1>
             <h2 class="text-[0.7rem] tracking-widest md:text-xs lg:text-sm">Hi there! Nice to meet you.</h2>
@@ -144,7 +152,7 @@
     </section>
 
     <!-- Covid Cases -->
-    <section class="py-24 md:py-28 xl:pt-48 px-10 md:px-14 lg:px-16 xl:px-24" id="cases">
+    <section class="section-container" id="cases">
         <div class="mb-5 md:mb-8 lg:mb-14">
             <h1 class="font-bold tracking-[0.3rem] md:text-4xl lg:text-[2.5rem] lg:tracking-[0.5rem] lg:mb-1">COVID CASES</h1>
             <h2 class="text-[0.6rem] tracking-widest md:text-xs lg:text-sm">Latest Coronavirus Cases</h2>

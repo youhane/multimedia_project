@@ -48,8 +48,10 @@ $(document).ready(() => {
     $(window).scroll(() => {
         if ($(this).scrollTop() > 720) {
             $('#nav').fadeIn();
+            $("#sound-toggle").fadeOut();
         } else {
             $('#nav').fadeOut();
+            $("#sound-toggle").fadeIn();
         }
     })
 
@@ -68,13 +70,16 @@ $(document).ready(() => {
     $("#sound-toggle").click(() => {
         let sound = $("video").prop('muted');
         $("video").prop("muted", !sound); 
-        toggleSound(sound);
+        toggleSound();
     })
 
-    const toggleSound = (soundOff) => {
-        $('#sound-icon').removeClass('fa-volume-high')
-        $('#sound-icon').removeClass('fa-volume-xmark')
-
-        !soundOff ? $('#sound-icon').addClass('fa-volume-high') : $('#sound-icon').addClass('fa-volume-xmark')
+    const toggleSound = () => {
+        if($('#sound-icon').hasClass('fa-volume-high')){
+            $('#sound-icon').removeClass('fa-volume-high')
+            $('#sound-icon').addClass('fa-volume-xmark')
+        } else {
+            $('#sound-icon').removeClass('fa-volume-xmark')
+            $('#sound-icon').addClass('fa-volume-high')
+        }
     }
 })
