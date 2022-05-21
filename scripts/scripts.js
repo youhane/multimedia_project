@@ -1,7 +1,6 @@
 const BASE_URL = 'https://disease.sh/v3/covid-19/all'
 
 $(document).ready(() => {
-    // Onload Page fadein
     $("body").fadeIn(700);
 
     $.ajax({

@@ -43,6 +43,30 @@
     .synopsis-image{
         @apply hidden lg:block max-w-xs w-24;
     }
+
+    .cast-container{
+        @apply flex flex-col text-center items-center font-semibold tracking-widest gap-1.5;
+    }
+
+    .cast-image{
+        @apply w-20 md:w-24 lg:w-[6.5rem] rounded-full;
+    }
+
+    .cast-name{
+        @apply text-lg md:text-xl;
+    }
+
+    .cast-info{
+        @apply md:text-lg;
+    }
+
+    .section-content{
+        @apply w-auto lg:w-11/12 mx-auto;
+    }
+
+    .section-title{
+        @apply mb-5 md:mb-8 lg:mb-14;
+    }
 }
 
 *{
