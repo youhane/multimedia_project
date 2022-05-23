@@ -28,6 +28,10 @@
         @apply flex w-full justify-between items-center border-y py-3 md:py-5 px-5 italic font-bold;
     }
 
+    .nav-button img{
+        @apply md:w-8;
+    }
+
     .nav-link{
         @apply w-full active:animate-ping hover:text-white/50;
     }
@@ -48,7 +52,7 @@
         @apply flex flex-col text-center items-center font-semibold tracking-widest gap-1.5;
     }
 
-    .cast-image{
+    .cast-container img{
         @apply w-20 md:w-24 lg:w-[6.5rem] rounded-full;
     }
 
@@ -67,6 +71,14 @@
     .section-title{
         @apply mb-5 md:mb-8 lg:mb-14;
     }
+
+    .section-title h1{
+        @apply font-bold tracking-[0.3rem] md:text-4xl lg:text-[2.5rem] lg:tracking-[0.5rem] lg:mb-1;
+    }
+
+    .section-title h2{
+        @apply tracking-widest md:text-xs lg:text-sm;
+    }
 }
 
 *{
@@ -75,4 +87,33 @@
 
 body::-webkit-scrollbar{
     display: none;
+}
+
+.cast-container:hover *{
+    @apply opacity-10 ease-in-out duration-300;
+}
+
+.cast-container::after{
+    @apply ease-in-out duration-300;
+    color: transparent;
+}
+
+.cast-container:hover::after{
+    @apply absolute pt-16 text-white text-lg md:text-2xl;
+}
+
+#feli:hover::after{
+    content: 'Multimedia Designer';
+}
+#jason:hover::after{
+    content: 'Web Programmer';
+}
+#keju:hover::after{
+    content: 'Multimedia Programmer';
+}
+#grady:hover::after{
+    content: 'Project Manager';
+}
+#vincent:hover::after{
+    content: 'Web Designer';
 }
