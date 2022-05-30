@@ -23,6 +23,7 @@
 
 - [TailwindCSS](https://tailwindcss.com/)
 - [Jquery](https://jquery.com/)
+- [Font Awesome](https://fontawesome.com/)
 
 ## About
 

@@ -112,7 +112,7 @@ body::-webkit-scrollbar{
     content: 'Multimedia Programmer';
 }
 #grady:hover::after{
-    content: 'Project Manager';
+    content: 'Multimedia Editor';
 }
 #vincent:hover::after{
     content: 'Web Designer';

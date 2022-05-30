@@ -1184,7 +1184,7 @@ body::-webkit-scrollbar{
 }
 
 #grady:hover::after{
-  content: 'Project Manager';
+  content: 'Multimedia Editor';
 }
 
 #vincent:hover::after{

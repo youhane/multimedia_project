@@ -57,6 +57,7 @@ $(document).ready(() => {
     $("#audio-yes").click(() => {
         $("#sound-prompt").fadeOut(1000);
         $("video").prop("muted", false);
+        $("video").prop("volume", 0.25);
         $('#sound-icon').addClass('fa-volume-high')
     })
     
