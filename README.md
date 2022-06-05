@@ -27,7 +27,8 @@
 
 ## About
 
-This site was created as a College Project on the Multimedia Systems course.
+This site was created as a College Project on the Multimedia Systems course.  
+Credits to https://disease.sh/ for the API that we use
 
 ## How To Use
 
